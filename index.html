@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ashwin R — Computer Science Engineer</title>
+<meta name="description" content="Portfolio of Ashwin R — Computer Science Engineering student building Python, NLP and machine learning applications." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-mark">AR<span class="nav-mark-dot">.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#work"><span class="nav-num">01</span>Work</a>
+    <a href="#about"><span class="nav-num">02</span>About</a>
+    <a href="#skills"><span class="nav-num">03</span>Skills</a>
+    <a href="#contact"><span class="nav-num">04</span>Contact</a>
+    <a href="assets/Ashwin_R_Resume.pdf" class="nav-resume" download>Résumé ↓</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Chennai, India — B.Tech CSE, SRM University</p>
+        <h1 class="hero-title">
+          Ashwin R builds<br>
+          small systems that <span class="hero-title-accent">read data,<br>learn patterns,</span><br>
+          and explain themselves.
+        </h1>
+        <p class="hero-sub">Computer Science student focused on Python, NLP and applied machine learning — journaling apps that sense emotion, tutoring platforms that grade themselves, models that cluster the unclusterable.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">See the work</a>
+          <a href="https://github.com/ashwin-subspace" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="assets/ashwin-photo.jpg" alt="Portrait of Ashwin R" class="portrait">
+        </div>
+        <div class="terminal" role="img" aria-label="Terminal animation introducing Ashwin">
+          <div class="terminal-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="terminal-title">ashwin@portfolio — zsh</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <p class="tline static"><span class="prompt">$</span> whoami</p>
+            <p class="tline static tresult">ashwin_r — cs engineer, class of 2027</p>
+            <p class="tline"><span class="prompt">$</span> <span class="typed" id="typed"></span><span class="cursor" id="cursor">▌</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>PYTHON</span><span>·</span><span>NLP</span><span>·</span><span>MACHINE LEARNING</span><span>·</span><span>PANDAS</span><span>·</span><span>SQLITE</span><span>·</span><span>TKINTER</span><span>·</span><span>RAG</span><span>·</span><span>AI AGENTS</span><span>·</span>
+        <span>PYTHON</span><span>·</span><span>NLP</span><span>·</span><span>MACHINE LEARNING</span><span>·</span><span>PANDAS</span><span>·</span><span>SQLITE</span><span>·</span><span>TKINTER</span><span>·</span><span>RAG</span><span>·</span><span>AI AGENTS</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>Selected work</h2>
+      <p class="section-sub">Five projects, each pushed to GitHub with full source. Click through to read the code.</p>
+    </div>
+
+    <div class="project-list" id="projectList">
+
+      <article class="project reveal">
+        <div class="project-index">01</div>
+        <div class="project-main">
+          <h3>SmartTutor AI</h3>
+          <p class="project-desc">A multi-portal e-learning system: students get targeted practice tests, instructors get a full analytics hub. SQLite stores quiz history; Pandas cleans and samples question banks; Matplotlib turns raw tables into subject-mastery and test-distribution charts.</p>
+          <ul class="project-stack">
+            <li>Python</li><li>Tkinter</li><li>SQLite</li><li>Pandas</li><li>Matplotlib</li>
+          </ul>
+        </div>
+        <a class="project-link" href="https://github.com/ashwin-subspace/smart-tutor-ai" target="_blank" rel="noopener">
+          <span>View repo</span><span class="arrow">→</span>
+        </a>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-index">02</div>
+        <div class="project-main">
+          <h3>Emotion Journal Analyzer</h3>
+          <p class="project-desc">A desktop journal that reads what you write and tracks how you felt while writing it. A Hugging Face DistilRoBERTa model paired with custom heuristics classifies text into seven emotional states at sentence level, plotted as an interactive timeline.</p>
+          <ul class="project-stack">
+            <li>Python</li><li>NLP</li><li>Hugging Face</li><li>Matplotlib</li><li>Pandas</li>
+          </ul>
+        </div>
+        <a class="project-link" href="https://github.com/ashwin-subspace/emotion-journal-analyzer" target="_blank" rel="noopener">
+          <span>View repo</span><span class="arrow">→</span>
+        </a>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-index">03</div>
+        <div class="project-main">
+          <h3>Cinemetrics AI</h3>
+          <p class="project-desc">A movie-analytics platform that predicts ratings before you watch. Feature-importance analysis explains why a prediction landed where it did, surfaced through interactive dashboards rather than a single opaque number.</p>
+          <ul class="project-stack">
+            <li>Python</li><li>Machine Learning</li><li>Data Visualization</li>
+          </ul>
+        </div>
+        <a class="project-link" href="https://github.com/ashwin-subspace/cinemetrics-ai" target="_blank" rel="noopener">
+          <span>View repo</span><span class="arrow">→</span>
+        </a>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-index">04</div>
+        <div class="project-main">
+          <h3>Patent Clustering System</h3>
+          <p class="project-desc">A GUI tool that groups patents by similarity using Agglomerative Hierarchical Clustering. PCA compresses high-dimensional patent features down to something you can actually see, rendered as dendrograms with cluster-quality metrics attached.</p>
+          <ul class="project-stack">
+            <li>Python</li><li>Clustering</li><li>PCA</li><li>Dendrograms</li>
+          </ul>
+        </div>
+        <a class="project-link" href="https://github.com/ashwin-subspace/patent-clustering-system" target="_blank" rel="noopener">
+          <span>View repo</span><span class="arrow">→</span>
+        </a>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-index">05</div>
+        <div class="project-main">
+          <h3>Lumina Novel Platform</h3>
+          <p class="project-desc">A premium, dark-themed reading platform built for people who read a lot: bookmarks that remember your place, reviews, personalized recommendations, and filtering that narrows a large catalog down fast.</p>
+          <ul class="project-stack">
+            <li>JavaScript</li><li>React</li><li>Web App</li>
+          </ul>
+        </div>
+        <a class="project-link" href="https://github.com/ashwin-subspace/lumina-novel-platform" target="_blank" rel="noopener">
+          <span>View repo</span><span class="arrow">→</span>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>About</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-text">
+        I'm a Computer Science Engineering student at SRM University, Chennai, with a habit of picking apart systems to see how they work — then rebuilding pieces of them myself. Most of what I build sits at the intersection of Python and applied machine learning: tools that read messy human data — journal entries, quiz attempts, patent filings — and turn it into something structured enough to act on.
+      </p>
+      <div class="about-card">
+        <div class="about-card-row">
+          <span class="about-card-label">Education</span>
+          <span class="about-card-value">B.Tech CSE, SRM University<br><span class="dim">2023 – 2027 · CGPA 8.11</span></span>
+        </div>
+        <div class="about-card-row">
+          <span class="about-card-label">Based in</span>
+          <span class="about-card-value">Chennai, Tamil Nadu, India</span>
+        </div>
+        <div class="about-card-row">
+          <span class="about-card-label">Focus</span>
+          <span class="about-card-value">Python · NLP · Machine Learning</span>
+        </div>
+        <div class="about-card-row">
+          <span class="about-card-label">Languages</span>
+          <span class="about-card-value">English · Tamil · Hindi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul class="chip-list">
+          <li>Python</li><li>JavaScript</li><li>C#</li><li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Libraries &amp; Frameworks</h3>
+        <ul class="chip-list">
+          <li>Pandas</li><li>Matplotlib</li><li>Tkinter</li><li>LangChain</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <ul class="chip-list">
+          <li>SQLite</li><li>VS Code</li><li>Blender</li><li>n8n</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>AI &amp; Concepts</h3>
+        <ul class="chip-list">
+          <li>Machine Learning</li><li>NLP</li><li>RAG</li><li>AI Agents</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <span class="section-num light">04</span>
+      <h2>Let's talk.</h2>
+      <p class="contact-sub">Open to internships, collaborations, and interesting problems involving data.</p>
+      <a href="mailto:ashwinraj9800@gmail.com" class="contact-email">ashwinraj9800@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://github.com/ashwin-subspace" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/ashwin-r-6b67b0347/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://leetcode.com/u/ash_wings/" target="_blank" rel="noopener">LeetCode ↗</a>
+        <a href="tel:+919952974706">+91 99529 74706</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Ashwin R</span>
+  <a href="#top" class="footer-top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
