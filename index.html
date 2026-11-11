@@ -1,356 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ashwin R — Computer Science Engineer</title>
-<meta name="description" content="Portfolio of Ashwin R — Computer Science Engineering student building Python, NLP and machine learning applications." />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashwin R — Android tools, close to the metal</title>
+<meta name="description" content="Ashwin R, a computer science student in Chennai, builds native Android software and local tools: Flick, AI Sheet Editor, Recall, Traverse, and Retro Spaceship.">
+<meta name="theme-color" content="#0c0b09">
+<meta name="color-scheme" content="dark">
+<script>document.documentElement.classList.add("js");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,640;1,9..144,520&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#work">Skip to selected work</a>
 
-<div class="grain" aria-hidden="true"></div>
-
-<nav class="nav" id="nav">
-  <a href="#top" class="nav-mark">AR<span class="nav-mark-dot">.</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
+<header class="nav" id="top">
+  <a class="mark" href="#top" aria-label="Ashwin R, back to top">
+    <svg viewBox="0 0 36 36" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="33" height="33" fill="none" stroke="currentColor" stroke-width="1"></rect>
+      <text x="18" y="23" text-anchor="middle">AR</text>
+    </svg>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+    <span class="nav-toggle-label">Menu</span>
   </button>
-  <div class="nav-links" id="navLinks">
-    <a href="#apps"><span class="nav-num">01</span>Apps</a>
-    <a href="#work"><span class="nav-num">02</span>Work</a>
-    <a href="#about"><span class="nav-num">03</span>About</a>
-    <a href="#skills"><span class="nav-num">04</span>Skills</a>
-    <a href="#contact"><span class="nav-num">05</span>Contact</a>
-    <a href="assets/Ashwin_R_Resume.pdf" class="nav-resume" download>Résumé ↓</a>
-  </div>
-</nav>
+  <nav class="nav-links" id="nav-links" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#experiments">Experiments</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a class="nav-download" href="public/Ashwin-R-Resume.pdf" download="Ashwin-R-Resume.pdf">Download resume</a>
+  </nav>
+</header>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Chennai, India — B.Tech CSE, SRM University</p>
-        <h1 class="hero-title">
-          Ashwin R builds<br>
-          small systems that <span class="hero-title-accent">read data,<br>learn patterns,</span><br>
-          and explain themselves.
-        </h1>
-        <p class="hero-sub">Computer Science student focused on Python, NLP and applied machine learning — journaling apps that sense emotion, tutoring platforms that grade themselves, models that cluster the unclusterable.</p>
-        <div class="hero-actions">
-          <a href="#apps" class="btn btn-primary">See the work</a>
-          <a href="https://github.com/ashwin-subspace" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="portrait-frame">
-          <img src="assets/ashwin-photo.jpg" alt="Portrait of Ashwin R" class="portrait">
-        </div>
-        <div class="terminal" role="img" aria-label="Terminal animation introducing Ashwin">
-          <div class="terminal-bar">
-            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-            <span class="terminal-title">ashwin@portfolio — zsh</span>
-          </div>
-          <div class="terminal-body" id="terminalBody">
-            <p class="tline static"><span class="prompt">$</span> whoami</p>
-            <p class="tline static tresult">ashwin_r — cs engineer, class of 2027</p>
-            <p class="tline"><span class="prompt">$</span> <span class="typed" id="typed"></span><span class="cursor" id="cursor">▌</span></p>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <figure class="portrait">
+      <img class="portrait-echo" src="public/assets/ashwin.jpg" width="400" height="525" alt="" aria-hidden="true">
+      <img src="public/assets/ashwin.jpg" width="400" height="525" alt="Ashwin R, a young man with short dark hair and a light beard, wearing a navy suit and light blue shirt." fetchpriority="high">
+    </figure>
+    <div class="hero-shade">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Computer science · Chennai</p>
+          <h1 id="hero-title">Ashwin R</h1>
+          <p class="lede">I build native Android software close to the SDK — tutors, a motion tool, a game — and a local spreadsheet that checks an AI edit before it lands.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">Selected work</a>
+            <a class="btn" href="public/Ashwin-R-Resume.pdf" download="Ashwin-R-Resume.pdf">Download resume</a>
+            <a href="https://github.com/ashwin-subspace">GitHub</a>
+            <a href="https://www.linkedin.com/in/ashwin-r-6b67b0347/">LinkedIn</a>
+            <a href="mailto:ashwinraj9800@gmail.com">Email</a>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>PYTHON</span><span>·</span><span>NLP</span><span>·</span><span>MACHINE LEARNING</span><span>·</span><span>PANDAS</span><span>·</span><span>SQLITE</span><span>·</span><span>TKINTER</span><span>·</span><span>RAG</span><span>·</span><span>AI AGENTS</span><span>·</span>
-        <span>PYTHON</span><span>·</span><span>NLP</span><span>·</span><span>MACHINE LEARNING</span><span>·</span><span>PANDAS</span><span>·</span><span>SQLITE</span><span>·</span><span>TKINTER</span><span>·</span><span>RAG</span><span>·</span><span>AI AGENTS</span><span>·</span>
+  <section class="stage wrap" id="work" data-carousel aria-roledescription="carousel" aria-label="Featured projects">
+    <div class="section-head">
+      <div>
+        <p class="kicker">01 — Selected</p>
+        <h2>Five projects worth opening.</h2>
+        <p class="section-note">Hover a card, or focus it, for the problem, what was built, and the choices that mattered. Arrow keys move the slideshow.</p>
+      </div>
+      <div class="stage-controls">
+        <button type="button" data-prev>Previous</button>
+        <button type="button" data-next>Next</button>
       </div>
     </div>
+
+    <div class="pager" role="tablist" aria-label="Featured projects">
+      <button type="button" role="tab" id="tab-flick" aria-controls="slide-flick" aria-selected="true" tabindex="0">
+        <span class="pager-num">01</span><span class="pager-name">Flick</span>
+        <span class="bar" aria-hidden="true"><i></i></span>
+      </button>
+      <button type="button" role="tab" id="tab-sheet" aria-controls="slide-sheet" aria-selected="false" tabindex="-1">
+        <span class="pager-num">02</span><span class="pager-name">Sheet</span>
+        <span class="bar" aria-hidden="true"><i></i></span>
+      </button>
+      <button type="button" role="tab" id="tab-recall" aria-controls="slide-recall" aria-selected="false" tabindex="-1">
+        <span class="pager-num">03</span><span class="pager-name">Recall</span>
+        <span class="bar" aria-hidden="true"><i></i></span>
+      </button>
+      <button type="button" role="tab" id="tab-traverse" aria-controls="slide-traverse" aria-selected="false" tabindex="-1">
+        <span class="pager-num">04</span><span class="pager-name">Traverse</span>
+        <span class="bar" aria-hidden="true"><i></i></span>
+      </button>
+      <button type="button" role="tab" id="tab-retro" aria-controls="slide-retro" aria-selected="false" tabindex="-1">
+        <span class="pager-num">05</span><span class="pager-name">Retro</span>
+        <span class="bar" aria-hidden="true"><i></i></span>
+      </button>
+    </div>
+
+    <p id="slide-live" class="sr" aria-live="polite"></p>
+
+    <div class="viewport" id="viewport" tabindex="0" aria-label="Featured project slides">
+      <article class="slide is-active" id="slide-flick" role="tabpanel" aria-labelledby="tab-flick">
+        <div class="card">
+          <div class="cover">
+            <img src="public/assets/cover-flick.jpg" width="1152" height="864" alt="A copper curve of light on a dark field, standing in for a motion path.">
+          </div>
+          <div class="card-body">
+            <p class="slide-meta"><span>01 / 05</span><span>2026</span></p>
+            <h3 class="slide-title">Flick</h3>
+            <p class="deck">Draw a motion with your thumb. Flick fits an easing curve and exports the code.</p>
+            <ul class="stack">
+              <li>Java</li><li>Android</li><li>Numerical fitting</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/ashwin-subspace/flick">Repository</a>
+              <a href="https://ashwin-subspace.github.io/flick/">Project page</a>
+              <a href="https://ashwin-subspace.github.io/flick/curve-tester.html">Curve tester</a>
+              <a href="https://github.com/ashwin-subspace/flick/releases/tag/v1.0.0">Release v1.0.0</a>
+            </p>
+            <p class="hint-touch"><span class="when-closed">Tap the card for the spec</span><span class="when-open">Tap the card to close</span></p>
+            <div class="dossier">
+              <div class="dossier-inner">
+                <div class="spec">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>Easing tools start from control handles and ask you to guess until the motion feels right.</p>
+                  </div>
+                  <div>
+                    <h4>What I built</h4>
+                    <p>An offline Android app. You draw the motion. It fits a cubic Bézier, a spring, or a path spline, then exports CSS, Jetpack Compose, Android pathInterpolator, Flutter, SwiftUI, and After Effects influence.</p>
+                  </div>
+                  <div>
+                    <h4>Technical choices</h4>
+                    <p>Historical touch samples and a One Euro filter keep the stroke. A Bézier wins when it is good enough, so a many-knot spline does not win on error alone. Desktop tests recover known curves: 228 math assertions and 61 app assertions. No Gradle, no network.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-sheet" role="tabpanel" aria-labelledby="tab-sheet" aria-hidden="true" inert>
+        <div class="card">
+          <div class="cover">
+            <img src="public/assets/cover-sheet.jpg" width="1152" height="864" alt="A dark grid with three cells glowing warm, standing in for edits held back from a sheet." loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="slide-meta"><span>02 / 05</span><span>2026</span></p>
+            <h3 class="slide-title">AI Sheet Editor</h3>
+            <p class="deck">A local spreadsheet where a model proposes edits, and nothing hits the file until you accept.</p>
+            <ul class="stack">
+              <li>TypeScript</li><li>React</li><li>Vite</li><li>Node</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/ashwin-subspace/ai-sheet-editor">Repository</a>
+              <a href="https://ashwin-subspace.github.io/ai-sheet-editor/">Showcase</a>
+            </p>
+            <p class="hint-touch"><span class="when-closed">Tap the card for the spec</span><span class="when-open">Tap the card to close</span></p>
+            <div class="dossier">
+              <div class="dossier-inner">
+                <div class="spec">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>A model that writes straight into a workbook can change the wrong cells, and you notice too late.</p>
+                  </div>
+                  <div>
+                    <h4>What I built</h4>
+                    <p>A React grid with formulas, a chat sidebar, and a Node helper that reads and writes .xlsx files on disk. Gemini, Groq, or a local Ollama model can propose the edit.</p>
+                  </div>
+                  <div>
+                    <h4>Technical choices</h4>
+                    <p>Proposals are structured operations. A checker runs them on a copy of the workbook. The real file changes only on accept. API keys stay in a gitignored settings file. The public page is a showcase; the editor runs on your machine.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-recall" role="tabpanel" aria-labelledby="tab-recall" aria-hidden="true" inert>
+        <div class="card">
+          <div class="cover">
+            <img src="public/assets/cover-recall.jpg" width="1152" height="864" alt="A small constellation of warm points on black, one brighter than the rest." loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="slide-meta"><span>03 / 05</span><span>2026</span></p>
+            <h3 class="slide-title">Recall</h3>
+            <p class="deck">A study tutor that keeps a model of the learner on the phone, and opens the next session from it.</p>
+            <ul class="stack">
+              <li>Java</li><li>Android</li><li>SQLite</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/ashwin-subspace/recall">Repository</a>
+              <a href="https://ashwin-subspace.github.io/recall/">Project page</a>
+              <a href="https://github.com/ashwin-subspace/recall/releases/tag/v1.0.0">Release v1.0.0</a>
+            </p>
+            <p class="hint-touch"><span class="when-closed">Tap the card for the spec</span><span class="when-open">Tap the card to close</span></p>
+            <div class="dossier">
+              <div class="dossier-inner">
+                <div class="spec">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>A chat tutor starts cold. You restate what you know, and what you missed, every time.</p>
+                  </div>
+                  <div>
+                    <h4>What I built</h4>
+                    <p>Home names one concept from a local model. The session opens with the tutor speaking first. Ending it sends the transcript back for concepts, confidence, and misconceptions, then stores them in SQLite.</p>
+                  </div>
+                  <div>
+                    <h4>Technical choices</h4>
+                    <p>No Gradle and no third-party libraries. Review gaps are 1, 2, 4, 8, or 16 days, from confidence the transcript demonstrated. The student brings a Gemini or Groq key. Setup will not continue until that key passes a test call.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-traverse" role="tabpanel" aria-labelledby="tab-traverse" aria-hidden="true" inert>
+        <div class="card">
+          <div class="cover">
+            <img src="public/assets/cover-traverse.jpg" width="1152" height="864" alt="Thin brass paths branching and rejoining on a charcoal ground." loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="slide-meta"><span>04 / 05</span><span>2026</span></p>
+            <h3 class="slide-title">Traverse</h3>
+            <p class="deck">An offline tutor for one unit of data structures: complexity and correctness.</p>
+            <ul class="stack">
+              <li>Java</li><li>Android</li><li>JSON curriculum</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/ashwin-subspace/traverse">Repository</a>
+              <a href="https://ashwin-subspace.github.io/traverse/">Project page</a>
+              <a href="https://github.com/ashwin-subspace/traverse/releases/tag/v1.0.0">Release v1.0.0</a>
+            </p>
+            <p class="hint-touch"><span class="when-closed">Tap the card for the spec</span><span class="when-open">Tap the card to close</span></p>
+            <div class="dossier">
+              <div class="dossier-inner">
+                <div class="spec">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>Practice that marks an answer and moves on. A miss never returns, and a lucky guess looks like mastery.</p>
+                  </div>
+                  <div>
+                    <h4>What I built</h4>
+                    <p>Five topics, fifty questions, lessons with Java and Python samples, quizzes, spaced review, and prerequisite gating. Version 1 is this unit only. Progress stays on the device.</p>
+                  </div>
+                  <div>
+                    <h4>Technical choices</h4>
+                    <p>The curriculum is JSON, checked before the APK builds. A bad answer index, a missing prerequisite, or a cycle fails the build. No account, no network, no Gradle.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-retro" role="tabpanel" aria-labelledby="tab-retro" aria-hidden="true" inert>
+        <div class="card">
+          <div class="cover">
+            <img src="public/assets/cover-retro.jpg" width="1152" height="864" alt="A small green and amber geometric craft in a dark field, with a faint dust ring." loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="slide-meta"><span>05 / 05</span><span>2026</span></p>
+            <h3 class="slide-title">Retro Spaceship</h3>
+            <p class="deck">A bullet-hell for Android. One finger flies. The ship has mass.</p>
+            <ul class="stack">
+              <li>Java</li><li>Android</li><li>SurfaceView</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/ashwin-subspace/retro-spaceship">Repository</a>
+              <a href="https://ashwin-subspace.github.io/retro-spaceship/">Project page</a>
+              <a href="https://github.com/ashwin-subspace/retro-spaceship/releases/tag/v1.0.0">Release v1.0.0</a>
+            </p>
+            <p class="hint-touch"><span class="when-closed">Tap the card for the spec</span><span class="when-open">Tap the card to close</span></p>
+            <div class="dossier">
+              <div class="dossier-inner">
+                <div class="spec">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>A ship that eases its position toward your finger stops when your finger stops. That is a cursor, not a craft.</p>
+                  </div>
+                  <div>
+                    <h4>What I built</h4>
+                    <p>A full-screen shooter. Drag to fly, a second finger for a bomb or overdrive, graze scoring, scripted bosses, four themes. Artwork and sound are Kenney CC0.</p>
+                  </div>
+                  <div>
+                    <h4>Technical choices</h4>
+                    <p>Flight damps both position and velocity, so the ship banks, carries, and glides. Waves spend a threat budget on enemy types. Difficulty rises by stage and does not relax during a boss. Java drawing to a SurfaceView. No engine, no Gradle.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <!-- APPS -->
-  <section class="work apps" id="apps">
+  <section class="experiments wrap" id="experiments" aria-labelledby="exp-title">
     <div class="section-head">
-      <span class="section-num">01</span>
-      <h2>Apps</h2>
-      <p class="section-sub">Five Android apps. Each one has source, a live page, and a release to download.</p>
+      <div>
+        <p class="kicker">02 — Also on GitHub</p>
+        <h2 id="exp-title">Experiments</h2>
+        <p class="section-note">Smaller tools, earlier desktop apps, and the internship site. Hover or focus a card for a second paragraph.</p>
+      </div>
     </div>
-
-    <div class="project-list">
-
-      <article class="project app reveal">
-        <div class="project-index">01</div>
-        <div class="project-main">
-          <h3>Traverse</h3>
-          <p class="project-desc">Offline Android DSA tutor. Lessons and quizzes with authored misconceptions and spaced review. v1 is the first unit, Complexity and correctness.</p>
-          <ul class="project-stack">
-            <li>Java</li><li>Android</li>
-          </ul>
-          <div class="app-links">
-            <a class="project-link" href="https://github.com/ashwin-subspace/traverse" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://ashwin-subspace.github.io/traverse/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://github.com/ashwin-subspace/traverse/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
-          </div>
-        </div>
-        <figure class="app-shot">
-          <img src="images/apps/traverse-lesson.png" width="1080" height="2160" alt="Traverse lesson screen titled What Big-O actually measures, with a short Java example.">
-        </figure>
+    <div class="exp-grid">
+      <article class="exp-card">
+        <p class="exp-kicker">Java · Android · Blender</p>
+        <h3>CamLink</h3>
+        <p class="deck">The phone’s gyro drives a Blender camera over Wi-Fi, and a take bakes to keyframes.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>An Android app plus a Blender add-on. Pan, tilt, roll, and zoom. Dolly and crane come from on-screen controls, not from walking the phone through the room.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/camlink">Repository</a>
+          <a href="https://ashwin-subspace.github.io/camlink/">Project page</a>
+          <a href="https://github.com/ashwin-subspace/camlink/releases/tag/v1.0.0">Release v1.0.0</a>
+        </p>
       </article>
 
-      <article class="project app reveal">
-        <div class="project-index">02</div>
-        <div class="project-main">
-          <h3>Recall</h3>
-          <p class="project-desc">Android study tutor with a local learner model. The student brings their own Gemini or Groq key.</p>
-          <ul class="project-stack">
-            <li>Java</li><li>Android</li><li>SQLite</li>
-          </ul>
-          <div class="app-links">
-            <a class="project-link" href="https://github.com/ashwin-subspace/recall" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://ashwin-subspace.github.io/recall/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://github.com/ashwin-subspace/recall/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
-          </div>
-        </div>
-        <figure class="app-shot">
-          <img src="images/apps/recall-home.png" width="1080" height="2160" alt="Recall home screen with Integration by parts due for review and an open misconception.">
-        </figure>
+      <article class="exp-card">
+        <p class="exp-kicker">JavaScript · offline</p>
+        <h3>Focus Flow</h3>
+        <p class="deck">A Pomodoro timer with tasks and streaks, installable on a phone home screen.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>Plain HTML, CSS, and JavaScript. The clock is an absolute deadline, so locking the phone does not drift it. A service worker caches the app. No account and no server.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/focus-flow">Repository</a>
+        </p>
       </article>
 
-      <article class="project app reveal">
-        <div class="project-index">03</div>
-        <div class="project-main">
-          <h3>Flick</h3>
-          <p class="project-desc">Draw a motion with your thumb and export the easing curve to CSS, Jetpack Compose, Android, Flutter, and SwiftUI.</p>
-          <ul class="project-stack">
-            <li>Java</li><li>Android</li>
-          </ul>
-          <div class="app-links">
-            <a class="project-link" href="https://github.com/ashwin-subspace/flick" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://ashwin-subspace.github.io/flick/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://ashwin-subspace.github.io/flick/curve-tester.html" target="_blank" rel="noopener"><span>Curve tester</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://github.com/ashwin-subspace/flick/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
-          </div>
-        </div>
-        <figure class="app-shot">
-          <img src="images/apps/flick-curve.png" width="1080" height="2160" alt="Flick result screen showing a fitted path curve and previews for move, scale, and fade.">
-        </figure>
+      <article class="exp-card">
+        <p class="exp-kicker">Python · Tkinter · SQLite</p>
+        <h3>SmartTutor AI</h3>
+        <p class="deck">A desktop quiz system with a student side and a teacher view of the scores.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>SQLite stores attempts. Pandas samples the question bank. Matplotlib draws subject-mastery and score charts. Listed on the earlier résumé as an e-learning project from early 2026.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/smart-tutor-ai">Repository</a>
+        </p>
       </article>
 
-      <article class="project app no-shot reveal">
-        <div class="project-index">04</div>
-        <div class="project-main">
-          <h3>CamLink</h3>
-          <p class="project-desc">Drive a Blender camera from a phone over Wi-Fi.</p>
-          <ul class="project-stack">
-            <li>Java</li><li>Android</li><li>Blender</li>
-          </ul>
-          <div class="app-links">
-            <a class="project-link" href="https://github.com/ashwin-subspace/camlink" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://ashwin-subspace.github.io/camlink/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://github.com/ashwin-subspace/camlink/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
-          </div>
-        </div>
+      <article class="exp-card">
+        <p class="exp-kicker">Python · Hugging Face</p>
+        <h3>Emotion Journal</h3>
+        <p class="deck">A desktop journal that labels an entry with one of seven emotions and plots them over time.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>DistilRoBERTa through Hugging Face, plus heuristics, in a Tkinter app. Entries sit in CSV via Pandas. Matplotlib draws the timeline.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/emotion-journal-analyzer">Repository</a>
+        </p>
       </article>
 
-      <article class="project app reveal">
-        <div class="project-index">05</div>
-        <div class="project-main">
-          <h3>Retro Spaceship</h3>
-          <p class="project-desc">A retro bullet-hell for Android with gesture controls. Kenney CC0 art.</p>
-          <ul class="project-stack">
-            <li>Java</li><li>Android</li>
-          </ul>
-          <div class="app-links">
-            <a class="project-link" href="https://github.com/ashwin-subspace/retro-spaceship" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://ashwin-subspace.github.io/retro-spaceship/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
-            <a class="project-link" href="https://github.com/ashwin-subspace/retro-spaceship/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
-          </div>
-        </div>
-        <figure class="app-shot">
-          <img src="images/apps/retro-flight.png" width="520" height="880" alt="Retro Spaceship player ship banking in flight, with a graze ring, on a dark field.">
-        </figure>
+      <article class="exp-card">
+        <p class="exp-kicker">Python · scikit-learn</p>
+        <h3>CineMetrics AI</h3>
+        <p class="deck">A desktop tool that estimates a movie rating from metadata and shows which features mattered.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>Random forest regression, with charts for error, feature importance, and a correlation heatmap. Tkinter, Pandas, Matplotlib, and Seaborn.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/cinemetrics-ai">Repository</a>
+        </p>
       </article>
 
+      <article class="exp-card">
+        <p class="exp-kicker">Python · clustering</p>
+        <h3>Patent Clustering</h3>
+        <p class="deck">A desktop tool that groups a patent table and shows the dendrogram.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>Agglomerative clustering, a silhouette score, and a PCA scatter plot. scikit-learn, SciPy, and Tkinter.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/patent-clustering-system">Repository</a>
+        </p>
+      </article>
+
+      <article class="exp-card">
+        <p class="exp-kicker">Flask · SQLite · 2026</p>
+        <h3>Insoft Solution</h3>
+        <p class="deck">A Flask rebuild of the Insoft Solutions site, with a catalogue and an enquiry inbox.</p>
+        <div class="exp-more"><div class="exp-more-inner">
+          <p>Written around the July–August 2026 internship. Routes for the page, a product enquiry, and a small admin gate. The README keeps it on localhost until the secret key and a production server are set.</p>
+        </div></div>
+        <p class="links">
+          <a href="https://github.com/ashwin-subspace/insoft-solution">Repository</a>
+        </p>
+      </article>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="work work-continued" id="work">
+  <section class="skills wrap" id="skills" aria-labelledby="skills-title">
     <div class="section-head">
-      <span class="section-num">02</span>
-      <h2>Selected work</h2>
-      <p class="section-sub">Five projects, each pushed to GitHub with full source. Click through to read the code.</p>
+      <div>
+        <p class="kicker">03 — From the repositories</p>
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-note">Languages and libraries that show up in the code, not a list of everything I have opened once.</p>
+      </div>
     </div>
-
-    <div class="project-list" id="projectList">
-
-      <article class="project reveal">
-        <div class="project-index">01</div>
-        <div class="project-main">
-          <h3>SmartTutor AI</h3>
-          <p class="project-desc">A multi-portal e-learning system: students get targeted practice tests, instructors get a full analytics hub. SQLite stores quiz history; Pandas cleans and samples question banks; Matplotlib turns raw tables into subject-mastery and test-distribution charts.</p>
-          <ul class="project-stack">
-            <li>Python</li><li>Tkinter</li><li>SQLite</li><li>Pandas</li><li>Matplotlib</li>
-          </ul>
-        </div>
-        <a class="project-link" href="https://github.com/ashwin-subspace/smart-tutor-ai" target="_blank" rel="noopener">
-          <span>View repo</span><span class="arrow">→</span>
-        </a>
-      </article>
-
-      <article class="project reveal">
-        <div class="project-index">02</div>
-        <div class="project-main">
-          <h3>Emotion Journal Analyzer</h3>
-          <p class="project-desc">A desktop journal that reads what you write and tracks how you felt while writing it. A Hugging Face DistilRoBERTa model paired with custom heuristics classifies text into seven emotional states at sentence level, plotted as an interactive timeline.</p>
-          <ul class="project-stack">
-            <li>Python</li><li>NLP</li><li>Hugging Face</li><li>Matplotlib</li><li>Pandas</li>
-          </ul>
-        </div>
-        <a class="project-link" href="https://github.com/ashwin-subspace/emotion-journal-analyzer" target="_blank" rel="noopener">
-          <span>View repo</span><span class="arrow">→</span>
-        </a>
-      </article>
-
-      <article class="project reveal">
-        <div class="project-index">03</div>
-        <div class="project-main">
-          <h3>Cinemetrics AI</h3>
-          <p class="project-desc">A movie-analytics platform that predicts ratings before you watch. Feature-importance analysis explains why a prediction landed where it did, surfaced through interactive dashboards rather than a single opaque number.</p>
-          <ul class="project-stack">
-            <li>Python</li><li>Machine Learning</li><li>Data Visualization</li>
-          </ul>
-        </div>
-        <a class="project-link" href="https://github.com/ashwin-subspace/cinemetrics-ai" target="_blank" rel="noopener">
-          <span>View repo</span><span class="arrow">→</span>
-        </a>
-      </article>
-
-      <article class="project reveal">
-        <div class="project-index">04</div>
-        <div class="project-main">
-          <h3>Patent Clustering System</h3>
-          <p class="project-desc">A GUI tool that groups patents by similarity using Agglomerative Hierarchical Clustering. PCA compresses high-dimensional patent features down to something you can actually see, rendered as dendrograms with cluster-quality metrics attached.</p>
-          <ul class="project-stack">
-            <li>Python</li><li>Clustering</li><li>PCA</li><li>Dendrograms</li>
-          </ul>
-        </div>
-        <a class="project-link" href="https://github.com/ashwin-subspace/patent-clustering-system" target="_blank" rel="noopener">
-          <span>View repo</span><span class="arrow">→</span>
-        </a>
-      </article>
-
-      <article class="project reveal">
-        <div class="project-index">05</div>
-        <div class="project-main">
-          <h3>Lumina Novel Platform</h3>
-          <p class="project-desc">A premium, dark-themed reading platform built for people who read a lot: bookmarks that remember your place, reviews, personalized recommendations, and filtering that narrows a large catalog down fast.</p>
-          <ul class="project-stack">
-            <li>JavaScript</li><li>React</li><li>Web App</li>
-          </ul>
-        </div>
-        <a class="project-link" href="https://github.com/ashwin-subspace/lumina-novel-platform" target="_blank" rel="noopener">
-          <span>View repo</span><span class="arrow">→</span>
-        </a>
-      </article>
-
-    </div>
+    <dl class="skill-grid">
+      <div>
+        <dt>Languages</dt>
+        <dd>Java, Python, TypeScript, JavaScript, HTML, CSS</dd>
+      </div>
+      <div>
+        <dt>Android</dt>
+        <dd>SDK builds without Gradle (aapt2, javac, d8), SQLite, custom views, SurfaceView</dd>
+      </div>
+      <div>
+        <dt>Web</dt>
+        <dd>React, Vite, Node.js, Vitest, a service worker on Focus Flow</dd>
+      </div>
+      <div>
+        <dt>Data &amp; models</dt>
+        <dd>Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Hugging Face Transformers</dd>
+      </div>
+      <div>
+        <dt>Other</dt>
+        <dd>Tkinter, Blender Python, Git. Excel workbooks via ExcelJS in AI Sheet Editor.</dd>
+      </div>
+    </dl>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <section class="about wrap" id="about" aria-labelledby="about-title">
     <div class="section-head">
-      <span class="section-num">03</span>
-      <h2>About</h2>
+      <div>
+        <p class="kicker">04 — About</p>
+        <h2 id="about-title">A short, sourced bio.</h2>
+      </div>
     </div>
     <div class="about-grid">
-      <p class="about-text">
-        I'm a Computer Science Engineering student at SRM University, Chennai, with a habit of picking apart systems to see how they work — then rebuilding pieces of them myself. Most of what I build sits at the intersection of Python and applied machine learning: tools that read messy human data — journal entries, quiz attempts, patent filings — and turn it into something structured enough to act on.
-      </p>
-      <div class="about-card">
-        <div class="about-card-row">
-          <span class="about-card-label">Education</span>
-          <span class="about-card-value">B.Tech CSE, SRM University<br><span class="dim">2023 – 2027 · CGPA 8.11</span></span>
-        </div>
-        <div class="about-card-row">
-          <span class="about-card-label">Based in</span>
-          <span class="about-card-value">Chennai, Tamil Nadu, India</span>
-        </div>
-        <div class="about-card-row">
-          <span class="about-card-label">Focus</span>
-          <span class="about-card-value">Python · NLP · Machine Learning</span>
-        </div>
-        <div class="about-card-row">
-          <span class="about-card-label">Languages</span>
-          <span class="about-card-value">English · Tamil · Hindi</span>
-        </div>
+      <figure class="portrait-small">
+        <img src="public/assets/ashwin.jpg" width="400" height="525" alt="Ashwin R, the same portrait, printed faintly beside the bio.">
+      </figure>
+      <div class="about-copy">
+        <p>I study computer science at SRM University in Chennai — B.Tech, 2023 to 2027, CGPA 8.11. Higher secondary was at Chettinad Vidyashram, science with computer science, 2022 to 2023.</p>
+        <p>In July and August 2026 I interned at Insoft Solutions in Chennai, on frontend and API work. The recent repositories are the Android apps and AI Sheet Editor. The Python desktop tools came earlier.</p>
+        <p>I speak English, Tamil, and Hindi.</p>
+        <dl class="facts">
+          <div><dt>Education</dt><dd>B.Tech CSE, SRM University, 2023–2027</dd></div>
+          <div><dt>School</dt><dd>Chettinad Vidyashram, higher secondary, 2022–2023</dd></div>
+          <div><dt>Internship</dt><dd>Insoft Solutions, Chennai, Jul–Aug 2026</dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/ashwin-subspace">ashwin-subspace</a></dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="skills" id="skills">
-    <div class="section-head">
-      <span class="section-num">04</span>
-      <h2>Skills</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <ul class="chip-list">
-          <li>Python</li><li>JavaScript</li><li>C#</li><li>HTML</li><li>CSS</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Libraries &amp; Frameworks</h3>
-        <ul class="chip-list">
-          <li>Pandas</li><li>Matplotlib</li><li>Tkinter</li><li>LangChain</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Tools &amp; Platforms</h3>
-        <ul class="chip-list">
-          <li>SQLite</li><li>VS Code</li><li>Blender</li><li>n8n</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>AI &amp; Concepts</h3>
-        <ul class="chip-list">
-          <li>Machine Learning</li><li>NLP</li><li>RAG</li><li>AI Agents</li>
-        </ul>
-      </div>
-    </div>
+  <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+    <p class="kicker">05 — Contact</p>
+    <h2 id="contact-title">Write, or open the profile.</h2>
+    <a class="email" href="mailto:ashwinraj9800@gmail.com">ashwinraj9800@gmail.com</a>
+    <ul class="contact-links">
+      <li><a href="https://www.linkedin.com/in/ashwin-r-6b67b0347/">LinkedIn</a></li>
+      <li><a href="https://github.com/ashwin-subspace">GitHub</a></li>
+      <li><a href="https://leetcode.com/u/ash_wings/">LeetCode</a></li>
+      <li><a href="tel:+919952974706">+91 99529 74706</a></li>
+      <li><a href="public/Ashwin-R-Resume.pdf" download="Ashwin-R-Resume.pdf">Download resume</a></li>
+    </ul>
   </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <span class="section-num light">05</span>
-      <h2>Let's talk.</h2>
-      <p class="contact-sub">Open to internships, collaborations, and interesting problems involving data.</p>
-      <a href="mailto:ashwinraj9800@gmail.com" class="contact-email">ashwinraj9800@gmail.com</a>
-      <div class="contact-links">
-        <a href="https://github.com/ashwin-subspace" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/ashwin-r-6b67b0347/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://leetcode.com/u/ash_wings/" target="_blank" rel="noopener">LeetCode ↗</a>
-        <a href="tel:+919952974706">+91 99529 74706</a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="footer">
+<footer class="footer wrap">
   <span>© 2026 Ashwin R</span>
-  <a href="#top" class="footer-top">Back to top ↑</a>
+  <a href="#top">Back to top</a>
 </footer>
 
 <script src="script.js"></script>
