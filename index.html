@@ -22,10 +22,11 @@
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="navLinks">
-    <a href="#work"><span class="nav-num">01</span>Work</a>
-    <a href="#about"><span class="nav-num">02</span>About</a>
-    <a href="#skills"><span class="nav-num">03</span>Skills</a>
-    <a href="#contact"><span class="nav-num">04</span>Contact</a>
+    <a href="#apps"><span class="nav-num">01</span>Apps</a>
+    <a href="#work"><span class="nav-num">02</span>Work</a>
+    <a href="#about"><span class="nav-num">03</span>About</a>
+    <a href="#skills"><span class="nav-num">04</span>Skills</a>
+    <a href="#contact"><span class="nav-num">05</span>Contact</a>
     <a href="assets/Ashwin_R_Resume.pdf" class="nav-resume" download>Résumé ↓</a>
   </div>
 </nav>
@@ -44,7 +45,7 @@
         </h1>
         <p class="hero-sub">Computer Science student focused on Python, NLP and applied machine learning — journaling apps that sense emotion, tutoring platforms that grade themselves, models that cluster the unclusterable.</p>
         <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">See the work</a>
+          <a href="#apps" class="btn btn-primary">See the work</a>
           <a href="https://github.com/ashwin-subspace" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
         </div>
       </div>
@@ -75,10 +76,116 @@
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="work" id="work">
+  <!-- APPS -->
+  <section class="work apps" id="apps">
     <div class="section-head">
       <span class="section-num">01</span>
+      <h2>Apps</h2>
+      <p class="section-sub">Five Android apps. Each one has source, a live page, and a release to download.</p>
+    </div>
+
+    <div class="project-list">
+
+      <article class="project app reveal">
+        <div class="project-index">01</div>
+        <div class="project-main">
+          <h3>Traverse</h3>
+          <p class="project-desc">Offline Android DSA tutor. Lessons and quizzes with authored misconceptions and spaced review. v1 is the first unit, Complexity and correctness.</p>
+          <ul class="project-stack">
+            <li>Java</li><li>Android</li>
+          </ul>
+          <div class="app-links">
+            <a class="project-link" href="https://github.com/ashwin-subspace/traverse" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://ashwin-subspace.github.io/traverse/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://github.com/ashwin-subspace/traverse/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
+          </div>
+        </div>
+        <figure class="app-shot">
+          <img src="images/apps/traverse-lesson.png" width="1080" height="2160" alt="Traverse lesson screen titled What Big-O actually measures, with a short Java example.">
+        </figure>
+      </article>
+
+      <article class="project app reveal">
+        <div class="project-index">02</div>
+        <div class="project-main">
+          <h3>Recall</h3>
+          <p class="project-desc">Android study tutor with a local learner model. The student brings their own Gemini or Groq key.</p>
+          <ul class="project-stack">
+            <li>Java</li><li>Android</li><li>SQLite</li>
+          </ul>
+          <div class="app-links">
+            <a class="project-link" href="https://github.com/ashwin-subspace/recall" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://ashwin-subspace.github.io/recall/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://github.com/ashwin-subspace/recall/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
+          </div>
+        </div>
+        <figure class="app-shot">
+          <img src="images/apps/recall-home.png" width="1080" height="2160" alt="Recall home screen with Integration by parts due for review and an open misconception.">
+        </figure>
+      </article>
+
+      <article class="project app reveal">
+        <div class="project-index">03</div>
+        <div class="project-main">
+          <h3>Flick</h3>
+          <p class="project-desc">Draw a motion with your thumb and export the easing curve to CSS, Jetpack Compose, Android, Flutter, and SwiftUI.</p>
+          <ul class="project-stack">
+            <li>Java</li><li>Android</li>
+          </ul>
+          <div class="app-links">
+            <a class="project-link" href="https://github.com/ashwin-subspace/flick" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://ashwin-subspace.github.io/flick/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://ashwin-subspace.github.io/flick/curve-tester.html" target="_blank" rel="noopener"><span>Curve tester</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://github.com/ashwin-subspace/flick/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
+          </div>
+        </div>
+        <figure class="app-shot">
+          <img src="images/apps/flick-curve.png" width="1080" height="2160" alt="Flick result screen showing a fitted path curve and previews for move, scale, and fade.">
+        </figure>
+      </article>
+
+      <article class="project app no-shot reveal">
+        <div class="project-index">04</div>
+        <div class="project-main">
+          <h3>CamLink</h3>
+          <p class="project-desc">Drive a Blender camera from a phone over Wi-Fi.</p>
+          <ul class="project-stack">
+            <li>Java</li><li>Android</li><li>Blender</li>
+          </ul>
+          <div class="app-links">
+            <a class="project-link" href="https://github.com/ashwin-subspace/camlink" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://ashwin-subspace.github.io/camlink/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://github.com/ashwin-subspace/camlink/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project app reveal">
+        <div class="project-index">05</div>
+        <div class="project-main">
+          <h3>Retro Spaceship</h3>
+          <p class="project-desc">A retro bullet-hell for Android with gesture controls. Kenney CC0 art.</p>
+          <ul class="project-stack">
+            <li>Java</li><li>Android</li>
+          </ul>
+          <div class="app-links">
+            <a class="project-link" href="https://github.com/ashwin-subspace/retro-spaceship" target="_blank" rel="noopener"><span>Repo</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://ashwin-subspace.github.io/retro-spaceship/" target="_blank" rel="noopener"><span>Live</span><span class="arrow">→</span></a>
+            <a class="project-link" href="https://github.com/ashwin-subspace/retro-spaceship/releases" target="_blank" rel="noopener"><span>Download</span><span class="arrow">↓</span></a>
+          </div>
+        </div>
+        <figure class="app-shot">
+          <img src="images/apps/retro-flight.png" width="520" height="880" alt="Retro Spaceship player ship banking in flight, with a graze ring, on a dark field.">
+        </figure>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work work-continued" id="work">
+    <div class="section-head">
+      <span class="section-num">02</span>
       <h2>Selected work</h2>
       <p class="section-sub">Five projects, each pushed to GitHub with full source. Click through to read the code.</p>
     </div>
@@ -161,7 +268,7 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="section-head">
-      <span class="section-num">02</span>
+      <span class="section-num">03</span>
       <h2>About</h2>
     </div>
     <div class="about-grid">
@@ -192,7 +299,7 @@
   <!-- SKILLS -->
   <section class="skills" id="skills">
     <div class="section-head">
-      <span class="section-num">03</span>
+      <span class="section-num">04</span>
       <h2>Skills</h2>
     </div>
     <div class="skills-grid">
@@ -226,7 +333,7 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-inner">
-      <span class="section-num light">04</span>
+      <span class="section-num light">05</span>
       <h2>Let's talk.</h2>
       <p class="contact-sub">Open to internships, collaborations, and interesting problems involving data.</p>
       <a href="mailto:ashwinraj9800@gmail.com" class="contact-email">ashwinraj9800@gmail.com</a>

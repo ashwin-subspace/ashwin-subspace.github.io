@@ -240,6 +240,31 @@ img{ max-width: 100%; display: block; }
 .project-link:hover{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .project-link:hover .arrow{ transform: translateX(3px); }
 
+.apps{ padding-bottom: 10px; }
+.work-continued{ padding-top: 88px; }
+
+.app{
+  grid-template-columns: 56px minmax(0, 1fr) 160px;
+  align-items: start;
+}
+.app.no-shot{ grid-template-columns: 56px minmax(0, 1fr); }
+
+.app-links{
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+}
+.app-links .project-link{ padding: 8px 14px; font-size: 12.5px; }
+
+.app-shot{
+  margin: 0; width: 160px;
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--paper-raised);
+  box-shadow: 0 16px 32px -22px rgba(16,30,51,0.5);
+}
+.app-shot img{
+  width: 100%; height: 268px; max-width: none;
+  object-fit: cover; object-position: top center;
+}
+
 /* ============================================================
    ABOUT
    ============================================================ */
@@ -347,4 +372,9 @@ img{ max-width: 100%; display: block; }
   .about-card-row{ flex-direction: column; gap: 4px; }
   .about-card-value{ text-align: left; }
   .contact{ border-radius: 20px 20px 0 0; }
+}
+
+@media (max-width: 880px){
+  .app, .app.no-shot{ grid-template-columns: 40px minmax(0, 1fr); }
+  .app-shot{ grid-column: 1 / -1; width: 160px; }
 }
