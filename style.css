@@ -185,7 +185,7 @@ h2 {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
+  grid-template-columns: minmax(0, 1fr) 250px;
   align-items: center;
   gap: 3.5rem;
   min-height: calc(100svh - 4.2rem);
@@ -244,23 +244,94 @@ h2 {
 
 .hero .portrait {
   justify-self: end;
-  width: 220px;
-  height: 286px;
+  width: 100%;
   margin: 0;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid rgba(224, 176, 122, 0.55);
-  box-shadow:
-    0 0 0 7px rgba(12, 11, 9, 0.55),
-    0 0 0 8px rgba(224, 176, 122, 0.22);
+  padding: 10px 10px 11px;
+  border: 1px solid rgba(243, 238, 230, 0.2);
+  background: rgba(8, 7, 6, 0.55);
+  position: relative;
 }
 
-.hero .portrait img {
+.hero .portrait:focus-visible {
+  outline: 1px solid var(--brass);
+  outline-offset: 4px;
+}
+
+.hero .glass {
+  display: none;
+  position: relative;
+  aspect-ratio: 400 / 525;
+}
+
+.hero .shard {
+  position: absolute;
+  inset: 0;
+  background: url("public/assets/ashwin.jpg") center / 100% 100% no-repeat;
+  filter: drop-shadow(0 0 0.6px rgba(243, 238, 230, 0.7));
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+  will-change: transform;
+}
+
+.hero .shard:nth-child(1) { clip-path: polygon(0 0, 34% 0, 40% 32%, 0 28%); transform: translate(-12px, -14px) rotate(-2deg); transition-delay: 0ms; }
+.hero .shard:nth-child(2) { clip-path: polygon(34% 0, 68% 0, 58% 40%, 40% 32%); transform: translate(2px, -16px) rotate(1.4deg); transition-delay: 40ms; }
+.hero .shard:nth-child(3) { clip-path: polygon(68% 0, 100% 0, 100% 36%, 58% 40%); transform: translate(16px, -12px) rotate(2.2deg); transition-delay: 70ms; }
+.hero .shard:nth-child(4) { clip-path: polygon(100% 36%, 100% 70%, 64% 58%, 58% 40%); transform: translate(18px, 4px) rotate(1.6deg); transition-delay: 110ms; }
+.hero .shard:nth-child(5) { clip-path: polygon(100% 70%, 100% 100%, 72% 100%, 64% 58%); transform: translate(14px, 16px) rotate(2.4deg); transition-delay: 90ms; }
+.hero .shard:nth-child(6) { clip-path: polygon(72% 100%, 30% 100%, 46% 62%, 64% 58%); transform: translate(2px, 16px) rotate(-1.2deg); transition-delay: 50ms; }
+.hero .shard:nth-child(7) { clip-path: polygon(30% 100%, 0 100%, 0 64%, 46% 62%); transform: translate(-14px, 14px) rotate(-2.2deg); transition-delay: 80ms; }
+.hero .shard:nth-child(8) { clip-path: polygon(0 64%, 0 28%, 40% 32%, 46% 62%); transform: translate(-16px, 2px) rotate(-1.5deg); transition-delay: 30ms; }
+.hero .shard:nth-child(9) { clip-path: polygon(40% 32%, 58% 40%, 64% 58%, 46% 62%); transform: translate(1px, 3px) rotate(1.2deg); transition-delay: 140ms; }
+
+.hero .glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("public/assets/ashwin.jpg") center / 100% 100% no-repeat;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.hero .portrait:hover .shard,
+.hero .portrait:focus-visible .shard {
+  transform: none;
+  filter: none;
+}
+
+.hero .portrait:hover .glass::after,
+.hero .portrait:focus-visible .glass::after {
+  opacity: 1;
+  transition-delay: 0.38s;
+}
+
+.hero .portrait-still {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
+  height: auto;
+}
+
+.hero .portrait figcaption {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero .glass { display: block; }
+
+  .hero .portrait-still {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
 }
 
 .section-head {
@@ -633,21 +704,16 @@ h2 {
 }
 
 .portrait-small {
-  width: 132px;
-  height: 172px;
+  width: 148px;
   margin: 0.4rem 0 0;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid rgba(224, 176, 122, 0.45);
-  box-shadow: 0 0 0 5px rgba(224, 176, 122, 0.12);
+  padding: 6px 6px 8px;
+  border: 1px solid rgba(243, 238, 230, 0.16);
 }
 
 .portrait-small img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
+  height: auto;
 }
 
 .about-copy p { margin: 0 0 0.9rem; color: var(--ink-soft); }
@@ -735,8 +801,7 @@ h2 {
   }
 
   .hero .portrait {
-    width: 132px;
-    height: 172px;
+    width: 168px;
     justify-self: start;
     order: -1;
   }
@@ -795,5 +860,16 @@ h2 {
 
   .stage:not(.is-reduced) .bar i,
   .bar i { transform: none; }
+
+  .hero .glass { display: none; }
+
+  .hero .portrait-still {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    overflow: visible;
+  }
 }
 
