@@ -14,6 +14,15 @@
     });
   }
 
+  const portrait = document.querySelector(".hero .portrait");
+  if (portrait) {
+    const settle = function (on) { portrait.classList.toggle("is-set", on); };
+    portrait.addEventListener("pointerenter", function () { settle(true); });
+    portrait.addEventListener("pointerleave", function () { settle(false); });
+    portrait.addEventListener("focus", function () { settle(true); });
+    portrait.addEventListener("blur", function () { settle(false); });
+  }
+
   const root = document.querySelector("[data-carousel]");
   if (!root) return;
 
