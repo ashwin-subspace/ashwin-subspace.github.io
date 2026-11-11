@@ -184,8 +184,12 @@ h2 {
 .hero-shade { position: relative; z-index: 2; }
 
 .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: 3.5rem;
   min-height: calc(100svh - 4.2rem);
-  padding: 16vh 0 4.2rem;
+  padding: 12vh 0 4.2rem;
 }
 
 .hero-copy { max-width: 38rem; position: relative; z-index: 1; }
@@ -239,31 +243,24 @@ h2 {
 }
 
 .hero .portrait {
-  position: absolute;
-  z-index: 1;
-  top: -2%;
-  right: -9%;
-  width: min(78vh, 540px);
+  justify-self: end;
+  width: 220px;
+  height: 286px;
   margin: 0;
-  pointer-events: none;
-  mix-blend-mode: multiply;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(224, 176, 122, 0.55);
+  box-shadow:
+    0 0 0 7px rgba(12, 11, 9, 0.55),
+    0 0 0 8px rgba(224, 176, 122, 0.22);
 }
 
 .hero .portrait img {
   display: block;
   width: 100%;
-  height: auto;
-  filter: saturate(0.58) contrast(1.12) brightness(1.28);
-  -webkit-mask-image: radial-gradient(ellipse 78% 84% at 46% 40%, #000 34%, transparent 74%);
-  mask-image: radial-gradient(ellipse 78% 84% at 46% 40%, #000 34%, transparent 74%);
-}
-
-.hero .portrait-echo {
-  position: absolute;
-  inset: 0 auto auto 0;
-  transform: translate(7px, 5px);
-  opacity: 0.45;
-  filter: saturate(0.2) contrast(1.15);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 .section-head {
@@ -636,31 +633,21 @@ h2 {
 }
 
 .portrait-small {
-  position: relative;
-  width: 190px;
+  width: 132px;
+  height: 172px;
   margin: 0.4rem 0 0;
-}
-
-.portrait-small::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: -18% -12%;
-  background: radial-gradient(ellipse at 50% 40%, rgba(120, 92, 58, 0.5), transparent 70%);
-  pointer-events: none;
-}
-
-.portrait-small {
-  mix-blend-mode: multiply;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(224, 176, 122, 0.45);
+  box-shadow: 0 0 0 5px rgba(224, 176, 122, 0.12);
 }
 
 .portrait-small img {
   display: block;
   width: 100%;
-  height: auto;
-  filter: saturate(0.5) contrast(1.06);
-  -webkit-mask-image: radial-gradient(ellipse 80% 86% at 50% 42%, #000 36%, transparent 76%);
-  mask-image: radial-gradient(ellipse 80% 86% at 50% 42%, #000 36%, transparent 76%);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 .about-copy p { margin: 0 0 0.9rem; color: var(--ink-soft); }
@@ -740,13 +727,18 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .hero-grid { min-height: 0; padding: 2.6rem 0 3rem; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    min-height: 0;
+    padding: 2.2rem 0 3rem;
+  }
 
   .hero .portrait {
-    width: min(92vw, 460px);
-    top: -4%;
-    right: -36%;
-    opacity: 0.9;
+    width: 132px;
+    height: 172px;
+    justify-self: start;
+    order: -1;
   }
 
   .hero-copy { max-width: none; }
